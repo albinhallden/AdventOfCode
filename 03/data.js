@@ -5,22 +5,22 @@ var y = 0;
 var values = [String(x + ',' + y)];
 
 for (var i = 0; i < input.length; i++) {
-    switch (input[i]) {
-        case '<':
-            x = x - 1;
-            break;
-        case '>':
-            x = x + 1;
-            break;
-        case '^':
-            y = y - 1;
-            break;
-        case 'v':
-            y = y + 1;
-            break;
-    }
-    if (values.indexOf(String(x + ',' + y)) === -1) {
-        values.push(String(x + ',' + y));
-    }
+  switch (input[i]) {
+    case '<':
+      x = x - 1;
+      break;
+    case '>':
+      x = x + 1;
+      break;
+    case '^':
+      y = y - 1;
+      break;
+    case 'v':
+      y = y + 1;
+      break;
+  }
+  if (values.indexOf(String(x + ',' + y)) === -1) {
+    values.push(String(x + ',' + y));
+  }
 }
 console.log('Total:', values.length);

@@ -7,34 +7,34 @@ var y2 = 0;
 var values = [String(x1 + ',' + y1)];
 
 for (var i = 0; i < input.length; i++) {
-    var x = i % 2 === 0 ? x1 : x2;
-    var y = i % 2 === 0 ? y1 : y2;
+  var x = i % 2 === 0 ? x1 : x2;
+  var y = i % 2 === 0 ? y1 : y2;
 
-    switch (input[i]) {
-        case '<':
-            x = x - 1;
-            break;
-        case '>':
-            x = x + 1;
-            break;
-        case '^':
-            y = y - 1;
-            break;
-        case 'v':
-            y = y + 1;
-            break;
-    }
+  switch (input[i]) {
+    case '<':
+      x = x - 1;
+      break;
+    case '>':
+      x = x + 1;
+      break;
+    case '^':
+      y = y - 1;
+      break;
+    case 'v':
+      y = y + 1;
+      break;
+  }
 
-    if (i % 2 === 0) {
-        x1 = x;
-        y1 = y
-    } else {
-        x2 = x;
-        y2 = y
-    }
+  if (i % 2 === 0) {
+    x1 = x;
+    y1 = y
+  } else {
+    x2 = x;
+    y2 = y
+  }
 
-    if (values.indexOf(String(x + ',' + y)) === -1) {
-        values.push(String(x + ',' + y));
-    }
+  if (values.indexOf(String(x + ',' + y)) === -1) {
+    values.push(String(x + ',' + y));
+  }
 }
 console.log('Total:', values.length);
