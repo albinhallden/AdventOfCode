@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const data = fs.readFileSync(path.join(process.cwd(), 'data2.txt')).toString();
+const data = fs.readFileSync(path.join(process.cwd(), 'data.txt')).toString();
 const dataList = data.split('\r\n');
 var sum = 0;
 
