@@ -7,6 +7,6 @@ function myFilter(input) {
   var vowels = input.match(/[aeiou]/g);
   var duplicate = input.match(/([a-z])\1/);
   var invalid = input.match(/ab|cd|pq|xy/);
-  return (invalid === null && vowels !== null && vowels.length > 2 && duplicate !== null);
+  return (!invalid && vowels && vowels.length > 2 && duplicate);
 }
 console.log(dataList.filter(myFilter).length);
