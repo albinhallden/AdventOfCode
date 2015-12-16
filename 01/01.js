@@ -2,10 +2,6 @@ var input = '(((())))()((((((((())()(()))(()((((()(()(((()((()((()(()()()()()))(
 var sum = 0;
 
 for (var i = 0; i < input.length; i++) {
-  if (input[i] === '(') {
-    sum++;
-  } else if (input[i] === ')') {
-    sum--;
-  }
+  sum += input[i] === '(' ? +1 : -1;
 }
 console.log('Sum:', sum);
